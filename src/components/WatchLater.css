@@ -1,0 +1,210 @@
+.watch-later {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.watch-later h2 {
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.loading,
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.watch-later-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.watch-later-item {
+  background: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.watch-later-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.75rem;
+}
+
+.item-header h3 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.btn-remove {
+  background: var(--bg-secondary);
+  border: none;
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-remove:hover {
+  background: #ff0000;
+  color: white;
+}
+
+.item-meta {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.item-channel {
+  color: var(--text-tertiary);
+  font-style: italic;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.add-to-week-container {
+  position: relative;
+}
+
+.btn-add-to-week {
+  background: var(--bg-primary);
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.btn-add-to-week:hover {
+  background: #ff0000;
+  color: white;
+}
+
+.day-selector {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--bg-primary);
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-hover);
+  z-index: 9999;
+  min-width: 150px;
+  padding: 0.5rem;
+}
+
+.day-selector-header {
+  padding: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.day-button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.25rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.day-button:hover:not(.cancel) {
+  background: #fff5f5;
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+.day-button.cancel {
+  margin-top: 0.5rem;
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.day-button.cancel:hover {
+  background: var(--bg-secondary);
+  border-color: #999;
+}
+
+.btn-link {
+  flex: 1;
+  display: inline-block;
+  background: #ff0000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.btn-link:hover {
+  background: #cc0000;
+}
+
+@media (max-width: 768px) {
+  .watch-later-list {
+    grid-template-columns: 1fr;
+  }
+}
+

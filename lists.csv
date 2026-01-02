@@ -1,0 +1,24 @@
+Type,Format,Intensity,Targets,Equipment,Impact,Standing_Floor,Instructor_Talk,Music_Vibe,Link_Status
+Workout,Follow-Along,Low,Abs,None,Low,Standing,None,Quiet,Dead
+Warmup,Circuit,Medium,Arms,Bands,Mixed,Floor,Some,Moderate,Ok
+Cooldown,HIIT,High,Back,Dumbbells,High,Mixed,Lots,Loud,Private
+Yoga,Mobility,,Biceps,Bench,,,,,Suspected
+,Strength,,Calves,Chair,,,,,
+,Stretch,,Cardio,,,,,,
+,Dance,,Chest,,,,,,
+,Cardio,,Core,,,,,,
+,,,Flexibility,,,,,,
+,,,Forearms,,,,,,
+,,,Full Body,,,,,,
+,,,Glutes,,,,,,
+,,,Hamstrings,,,,,,
+,,,Legs,,,,,,
+,,,Lower Body,,,,,,
+,,,Mobility,,,,,,
+,,,Neck,,,,,,
+,,,Obliques,,,,,,
+,,,Quads,,,,,,
+,,,Shoulders,,,,,,
+,,,Traps,,,,,,
+,,,Triceps,,,,,,
+,,,Upper Body,,,,,,

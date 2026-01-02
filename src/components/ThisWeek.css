@@ -1,0 +1,389 @@
+.this-week {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.this-week h2 {
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.week-selector {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.week-selector-group,
+.playlist-selector-group,
+.quick-add-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-reset-week {
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border: 2px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.btn-reset-week:hover {
+  border-color: #ff0000;
+  color: #ff0000;
+  background: #fff5f5;
+}
+
+.playlist-select {
+  padding: 0.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1;
+  max-width: 400px;
+}
+
+.playlist-select:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+
+.save-playlist-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto; /* Push to the right side of the line */
+}
+
+.btn-save-to-playlist {
+  background: var(--accent-teal);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-save-to-playlist:hover {
+  background: var(--accent-teal-hover);
+}
+
+.save-playlist-input {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex: 1;
+}
+
+.playlist-name-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.playlist-name-input:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+
+.btn-save-playlist {
+  background: var(--accent-teal);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-save-playlist:hover:not(:disabled) {
+  background: var(--accent-teal-hover);
+}
+
+.btn-save-playlist:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-cancel-playlist {
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border: 2px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-cancel-playlist:hover:not(:disabled) {
+  border-color: var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.btn-cancel-playlist:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.playlist-status {
+  display: flex;
+  align-items: center;
+}
+
+.playlist-badge {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .week-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .week-selector-group,
+  .playlist-selector-group,
+  .save-playlist-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .save-playlist-group {
+    margin-left: 0; /* Reset margin on mobile */
+    width: 100%;
+  }
+
+  .save-playlist-input {
+    flex-direction: column;
+  }
+
+  .playlist-name-input {
+    width: 100%;
+  }
+}
+
+.week-selector label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.week-selector input {
+  padding: 0.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1400px) {
+  .week-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .week-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.day-square {
+  background: var(--bg-primary);
+  border: 3px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  min-height: 200px;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-square.has-workout {
+  border-color: #ff0000;
+  cursor: pointer;
+}
+
+.day-square.has-workout:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px var(--shadow-hover);
+}
+
+.day-square.rest-day {
+  border-color: #00b8a9;
+  border-style: dashed;
+  cursor: default;
+}
+
+.day-square.completed {
+  background: var(--bg-secondary);
+  opacity: 0.7;
+}
+
+.day-square.completed .day-header h3 {
+  text-decoration: line-through;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.day-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.day-header h3 {
+  color: #ff0000;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.btn-complete {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ff0000;
+  background: var(--bg-primary);
+  color: #ff0000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-complete:hover {
+  background: #ff0000;
+  color: white;
+}
+
+.btn-complete.active {
+  background: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+.btn-remove-day {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-tertiary);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.btn-remove-day:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+.workout-info {
+  flex: 1;
+}
+
+.workout-info h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.workout-info p {
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.workout-info .target {
+  color: #ff0000;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.workout-info .extra {
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.no-workout {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.no-workout.rest-day {
+  color: #00b8a9;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .week-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

@@ -1,0 +1,132 @@
+.channels {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.channels h2 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.channels-intro {
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.trainer-card {
+  background: var(--bg-primary);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.trainer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px var(--shadow-hover);
+}
+
+.trainer-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.trainer-image-container {
+  width: 100%;
+  padding-top: 100%; /* Square aspect ratio */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trainer-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainer-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.trainer-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.trainer-name {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.trainer-workouts {
+  margin: 0 0 1rem 0;
+  color: #ff0000;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.trainer-bio {
+  margin-top: auto;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.trainer-bio p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+}

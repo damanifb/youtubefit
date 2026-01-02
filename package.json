@@ -1,0 +1,38 @@
+{
+  "name": "youtubefit",
+  "version": "1.0.0",
+  "description": "Personal fitness companion that curates and recommends YouTube workout videos",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "dev:network": "cross-env HOST=0.0.0.0 node server/index.js",
+    "import": "node server/scripts/import-csv.js",
+    "dev:frontend": "vite",
+    "dev:frontend:network": "cross-env VITE_HOST=0.0.0.0 vite",
+    "build": "vite build",
+    "start:all": "concurrently \"npm run dev\" \"npm run dev:frontend\" --names \"backend,frontend\" --prefix-colors \"blue,green\""
+  },
+  "keywords": [
+    "fitness",
+    "youtube",
+    "workouts"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.2",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "concurrently": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "vite": "^5.0.0"
+  }
+}
