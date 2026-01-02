@@ -208,12 +208,12 @@ Three tabs for workout management:
 
 ### Building a Week
 1. Click on the Build My Week tab
-1. Use the secondary options to choose between Simple, Basic, Advanced menu choices
-1. Check the "Week starting" to make sure you're editing the correct week
-1. Edit each day (or leave blank if it's a rest day, use the x to reset that days settings)
-1. Click **"Generate Week"** (all filters apply to all days)
-1. Click **"Create Playlist"** to save the week for reuse
-1. Click **"Jump to This Week"** to see this week on your Dashboard
+2. Use the secondary options to choose between Simple, Basic, Advanced menu choices
+3. Check the "Week starting" to make sure you're editing the correct week
+4. Edit each day (or leave blank if it's a rest day, use the x to reset that days settings)
+5. Click **"Generate Week"** (all filters apply to all days)
+6. Click **"Create Playlist"** to save the week for reuse
+7. Click **"Jump to This Week"** to see this week on your Dashboard
 
 #### Day Management
 - Click **×** to clear all selections for a day
@@ -323,7 +323,8 @@ Some other examples:
 - https://www.youtube.com/@TRAINWITHGAINSBYBRAINS -> `TRAINWITHGAINSBYBRAINS.jpg`
 - https://www.youtube.com/@midasmvmt -> `midasmvmt.jpg`
 
-Recommended size: 300x300px or larger.  
+**Recommended size: 300x300px or larger.**
+
 I went with 800x800, using this site to pull them:  
 https://seostudio.tools/youtube-channel-logo-downloader
 
@@ -351,16 +352,16 @@ npm run start:all
 Okay I lied I looked over some of this as well
 
 ### YouTube Asking me to Sign in...
-If you use a VPN, it might ask you to sign in when viewing an embedded video. Pretty frustrating. I'll try to figure something out.
+If you use a VPN / tons of blockers, it might ask you to sign in when viewing an embedded video and it might not give them a view. I tried watching one embedded in Libre, where I have a few privacy extensions, and it didn't get into my watch history at all. But when I used a clean Chrome, it appeared fine. In the meantime, if you just want to get the workout and not use the embed or have a HTPC, click the "Open on YouTube" button or click the icon on the video to open that video in YouTube. While that's open in YouTube, if you know how to access your history on your YouTube TV, go to your TV to do your workout. Click on your warmup, workout routine and cooldown to get them all prepped in your history to view on the TV.
 
 ### Port already in use
 - Vite auto-finds available ports; check browser console for actual port
 
 ### Database locked error
-- Ensure only one instance of the app is running
+- Make sure only one instance of the app is running. Check your task manager for node.js instances.
 
 ### Adding Your own Workouts
-The sheet for adding your own workouts / trainers is a bit heavy, but if you can figure out a script or way to pull videos from YT, you'd have a giant library of workout videos to cycle through.
+The sheet for adding your own workouts (workouts.csv) / trainers (channels.csv) is a bit heavy and tedious (I manually added the majority of these over the summer last year... we were tracking on a spreadsheet alone originally), but if you can figure out a script or way to pull videos from YT, you'd have a giant library of workout videos to cycle through. I plan to get to 365 for a nice number of the year and working on a clean way to check for dead links. If you need a formula for normalizing youtube links, let me know.
 
 ### Workouts not importing
 - Verify CSV format matches specification
@@ -395,3 +396,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
